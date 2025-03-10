@@ -10,7 +10,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Optional background color */
+    background-color: #f0f0f0;
 }
 
 .parent {
@@ -18,17 +18,20 @@ body, html {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
-    width: calc(100vw - 40px); /* Full width minus padding */
-    height: calc(100vh - 40px); /* Full height minus padding */
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
     padding: 20px;
     border-radius: 10px;
-    background-color: white; /* Optional background color */
+    background-color: white;
 }
 
 .div1 {
     grid-row: span 2 / span 2;
     background-color: blue;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
@@ -37,6 +40,9 @@ body, html {
     grid-row-start: 3;
     background-color: pink;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
@@ -44,22 +50,32 @@ body, html {
     grid-column-start: 1;
     grid-row-start: 4;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
+/* Updated div4 (Red) to extend until the bottom of div6 */
 .div4 {
-    grid-row: span 4 / span 4;
     grid-column-start: 2;
     grid-row-start: 1;
+    grid-row: span 3 / span 3; /* Extends to the bottom of div6 */
     background-color: red;
     color: white;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 50px 0 0; /* Curved at the top, straight bottom */
 }
 
 .div5 {
     grid-column-start: 3;
     grid-row-start: 1;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
@@ -67,14 +83,21 @@ body, html {
     grid-column-start: 3;
     grid-row-start: 2;
     background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
+/* Div8 moves to the right and extends downward */
 .div8 {
-    grid-row: span 2 / span 2;
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-row-start: 3;
+    grid-row: span 3 / span 3;
     background-color: blue;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
 }
